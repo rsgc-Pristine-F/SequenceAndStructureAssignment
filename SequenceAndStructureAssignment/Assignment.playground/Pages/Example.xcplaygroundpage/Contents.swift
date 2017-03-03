@@ -41,7 +41,7 @@ for x in stride(from: 25, through: 475, by: 50){
     }
 }
 
-
+canvas.drawEllipse(centreX: 5, centreY: 400, width: 1, height: 1)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
