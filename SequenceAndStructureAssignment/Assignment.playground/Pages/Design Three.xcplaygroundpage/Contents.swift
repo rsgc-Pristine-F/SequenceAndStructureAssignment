@@ -21,22 +21,36 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
+
 // Generate a grid
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
 
-// This loop makes a 10 rows of columns
-for x in stride(from: 25, through: 475, by: 50){
-    
-    // This loop makes a single column, bottom to top
-    for y in stride(from: 25, through: 475, by: 50) {
-        
-        // Draw the shapes
-        canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
-        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
+//// This loop makes a 10 rows of columns
+//for x in stride(from: 25, through: 475, by: 50){
+//    
+//    // This loop makes a single column, bottom to top
+//    for y in stride(from: 25, through: 475, by: 50) {
+//        
+//        // Draw the shapes
+//        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
+//    }
+//}
+
+// This loop is for circles
+canvas.fillColor = Color.white
+for X in stride(from: 25, through: 475, by: 50){
+    for Y in stride(from: 475, through: 25, by: -50){
+        for radius in stride(from: 2, through: 82, by: 16){
+            canvas.drawShapesWithFill
+            canvas.borderColor = Color.init(hue: 230, saturation: 100, brightness: 80, alpha: 100)
+            canvas.drawEllipse(centreX: X, centreY: Y, width: radius, height: radius)
+           
+            
+            
+        }
     }
 }
-
 
 /*:
  ## Template code
